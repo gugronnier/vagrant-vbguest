@@ -1,3 +1,7 @@
+## 0.14.201 (2017-07-19)
+
+- add Windows installer
+
 ## 0.14.1 (2017-05-09)
 
 - Fix Debian installer. Thanks @chrisko [GH-255], [GH-256]
