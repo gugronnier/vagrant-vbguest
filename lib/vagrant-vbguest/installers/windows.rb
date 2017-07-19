@@ -96,7 +96,7 @@ module VagrantVbguestWindows
 
     # The arguments string, which gets passed to the installer executable
     def windows_installer_arguments
-#      @windows_installer_arguments ||= Array(options[:windows_installer_arguments]).join " "
+    #  @windows_installer_arguments ||= Array(options[:windows_installer_arguments]).join " "
       @windows_installer_arguments ||= '/S'
     end
 
