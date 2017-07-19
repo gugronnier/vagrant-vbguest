@@ -268,7 +268,7 @@ Vagrant::Config.run do |config|
   config.vbguest.installer = MyInstaller
 end
 ```
-
+### Windows compatibility file import from https://github.com/m03/vagrant-vbguest-windows
 
 ### Extending vbguest (aka Very Advanced Usage)
 
