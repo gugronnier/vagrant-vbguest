@@ -5,10 +5,10 @@ Gem::Specification.new do |s|
   s.name        = "vagrant-vbguest"
   s.version     = VagrantVbguest::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Robert Schulze"]
-  s.email       = ["robert@dotless.de"]
+  s.authors     = ["Guillaume GRONNIER"]
+  s.email       = ["gglyon769@gmail.com"]
   s.license     = 'MIT'
-  s.homepage    = "https://github.com/dotless-de/vagrant-vbguest"
+  s.homepage    = "https://github.com/gugronnier/vagrant-vbguest-modify"
   s.summary     = %q{A Vagrant plugin to install the VirtualBoxAdditions into the guest VM}
   s.description = %q{A Vagrant plugin which automatically installs the host's VirtualBox Guest Additions on the guest system.}
 
