@@ -286,6 +286,7 @@ This poroject contains a [sample installer gem](https://github.com/dotless-de/va
 
 ## Known Issues
 
+* The installer script not work for Windows only check systems work actually 
 * The installer script requires a writeable upload directory on the guest system. This defaults to `/tmp` but can be overwritten with the `iso_upload_path` option.
 * The installer script requires a valid mount point on the guest system. This defaults to `/mnt` but can be overwritten with the `iso_mount_point` option.
 * On multi vm boxes, the iso file will be downloaded for each vm.
