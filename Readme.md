@@ -2,21 +2,28 @@
 
 *vagrant-vbguest* is a [Vagrant](http://vagrantup.com) plugin which automatically installs the host's VirtualBox Guest Additions on the guest system.
 
-[![Join the chat at https://gitter.im/dotless-de/vagrant-vbguest](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dotless-de/vagrant-vbguest?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Code Climate](https://codeclimate.com/github/dotless-de/vagrant-vbguest.png)](https://codeclimate.com/github/dotless-de/vagrant-vbguest)
-[![Dependency Status](https://gemnasium.com/dotless-de/vagrant-vbguest.png)](https://gemnasium.com/dotless-de/vagrant-vbguest)
+Windows compatibility file import from https://github.com/m03/vagrant-vbguest-windows
+
+-- My actual version number is 0.14.201 
+
 [![Inline docs](http://inch-ci.org/github/dotless-de/vagrant-vbguest.svg?branch=master)](http://inch-ci.org/github/dotless-de/vagrant-vbguest)
-[![Gem Version](https://badge.fury.io/rb/vagrant-vbguest.svg)](https://badge.fury.io/rb/vagrant-vbguest)
 
-
-## Installation
-
+## Compilation
 Requires vagrant 0.9.4 or later (including 1.x)
-
-### Vagrant ≥ 1.1
+Requires Ruby 2.1.5 or later
+Requires RubyGems 2.2.2 or later
+If you modify something in the source code or just clone this repository :
 
 ```bash
-$ vagrant plugin install vagrant-vbguest
+$ gem build vagrant-vbguest.gemspec
+```
+
+## Installation
+Use it after Compilation
+
+### Vagrant ≥ 1.1
+```bash
+$ vagrant plugin install ./vagrant-vbguest-0.14.201.gem
 ```
 
 ### Vagrant 1.0 and older
@@ -25,16 +32,17 @@ Since vagrant v1.0.0 the preferred installation method for vagrant is using the 
 If you installed vagrant that way, you need to use vagrant's gem wrapper:
 
 ```bash
-$ vagrant gem install vagrant-vbguest
+$ vagrant gem install ./vagrant-vbguest-0.14.201.gem
 ```
 
 If you installed vagrant using RubyGems, use:
 
 ```bash
-$ gem install vagrant-vbguest
+$ gem install ./vagrant-vbguest-0.14.201.gem
 ```
 
 Compatibly for vagrant 0.8 is provided by version 0.0.3 (which lacks a bunch of new options)
+
 
 ## Configuration / Usage
 
@@ -268,7 +276,7 @@ Vagrant::Config.run do |config|
   config.vbguest.installer = MyInstaller
 end
 ```
-### Windows compatibility file import from https://github.com/m03/vagrant-vbguest-windows
+
 
 ### Extending vbguest (aka Very Advanced Usage)
 
@@ -278,7 +286,6 @@ This poroject contains a [sample installer gem](https://github.com/dotless-de/va
 
 ## Known Issues
 
-* The installer script, which mounts and runs the GuestAdditions Installer Binary, works on Linux only. Most likely it will run on most Unix-like platforms.
 * The installer script requires a writeable upload directory on the guest system. This defaults to `/tmp` but can be overwritten with the `iso_upload_path` option.
 * The installer script requires a valid mount point on the guest system. This defaults to `/mnt` but can be overwritten with the `iso_mount_point` option.
 * On multi vm boxes, the iso file will be downloaded for each vm.
